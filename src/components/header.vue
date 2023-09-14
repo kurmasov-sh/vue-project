@@ -1,20 +1,20 @@
 <template>
-    <header class="app-header">
-      <div class="logo">
-        <router-link to="/">Интернет-магазин</router-link>
-      </div>
-      <nav class="nav-links">
-        <router-link to="/">Главная</router-link>
-        <router-link to="/products">Продукты</router-link>
-        <router-link to="/cart">Корзина</router-link>
-        <!-- Добавьте другие навигационные ссылки, если необходимо -->
-      </nav>
-      <div class="user-section">
-        <!-- Здесь вы можете отобразить информацию о пользователе, например, имя пользователя, иконку профиля, и т.д. -->
-        <router-link v-if="!authenticated" to="/login">Войти</router-link>
-        <button v-else @click="logout">Выйти</button>
-      </div>
-    </header>
+ <div class="container">
+  <div class="header">
+  <div class="header-wrapper">
+    <div class="header__logo">Мебельный магазин</div>
+    <div class="header__menu">
+      <ul>
+        <li>1 пункт меню</li>
+      </ul>
+    </div>
+    <div class="header__right-column">
+      <div class="basket">корзина</div>
+      <div class="auth-logo">Авторизация</div>
+    </div>
+  </div>
+ </div>
+ </div>
   </template>
   
   <script>
@@ -36,42 +36,17 @@
   </script>
   
   <style scoped>
-  .app-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .user-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-section button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+
+.container {
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+ .header-wrapper {
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  justify-content: space-between;
+  max-height: 150px;
+ }
   </style>
   

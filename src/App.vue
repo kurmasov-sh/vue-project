@@ -1,9 +1,5 @@
 <template>
-    <div class="app">
-        <header_temp/>
-        <main_temp/>
-        <footer_temp/>
-    </div>
+    <main_temp/>
 </template>
 
 <script>
@@ -26,5 +22,8 @@ export default {
 <style>
 *{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
+
 </style>

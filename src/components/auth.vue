@@ -1,9 +1,9 @@
 <template>
 <div class="container">
     <div class="authorization">
-    <p>Авторизация</p>
-    <input class="input" type="text">
-    <input class="input" type="text">
+    <p class="authorization__title">Авторизация</p>
+    <input class="input" type="text" placeholder="Логин">
+    <input class="input" type="text" placeholder="Пароль">
     <button class="authorization__btn">Авторизация</button>
 </div>
 </div>
@@ -25,6 +25,7 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
+    margin-top: 20%;
 }
 .authorization{
     text-align: center;
@@ -35,9 +36,20 @@ export default {
 }
 .input{
     margin-bottom: 20px;
+    height: 25px;
+    border: solid 1px rgb(26, 192, 178);
+    border-radius: 5px;
 }
 .authorization__btn{
-    width: 50%;
+    border: none;
+    background-color: aquamarine;
+    padding: 6px 12px 6px 12px;
+    max-width: 250px;
     align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.authorization__title{
+    margin-bottom: 40px;
 }
 </style>
