@@ -1,5 +1,9 @@
 <template>
-    <main_temp/>
+    <div class="container">
+        <header_temp/>
+        <main_temp/>
+    </div>
+    
 </template>
 
 <script>

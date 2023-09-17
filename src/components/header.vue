@@ -1,20 +1,40 @@
 <template>
- <div class="container">
-  <div class="header">
-  <div class="header-wrapper">
-    <div class="header__logo">Мебельный магазин</div>
-    <div class="header__menu">
-      <ul>
-        <li>1 пункт меню</li>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Интернет магазин</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Каталог</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Выпадающий список
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Отключенная</a>
+        </li>
       </ul>
-    </div>
-    <div class="header__right-column">
-      <div class="basket">корзина</div>
-      <div class="auth-logo">Авторизация</div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
     </div>
   </div>
- </div>
- </div>
+</nav>
   </template>
   
   <script>
@@ -25,28 +45,13 @@
       };
     },
     methods: {
-      logout() {
-        // Здесь можно реализовать логику выхода из системы
-        // Например, удалить данные о сеансе пользователя и перенаправить на страницу входа.
-        this.authenticated = false;
-        this.$router.push("/login");
-      },
+      
     },
   };
   </script>
   
   <style scoped>
 
-.container {
-  margin-left: 200px;
-  margin-right: 200px;
 
-}
- .header-wrapper {
-  background-color: rgb(187, 187, 187);
-  display: flex;
-  justify-content: space-between;
-  max-height: 150px;
- }
   </style>
   

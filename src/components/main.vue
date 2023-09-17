@@ -1,10 +1,11 @@
 <template>
-<div class="item">
-    <div class="item__img">
-        <img  class="img" :src="item_path" alt="">
-    </div>
-    <div class="item__title">Имя товара</div>
-    <div class="item__desc">Описание товара</div>
+<div class="card" style="width: 18rem;">
+  <img src="/images/product-item_img2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Название товара</h5>
+    <p class="card-text">Описание товара</p>
+    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+  </div>
 </div>
 </template>
 
@@ -19,15 +20,5 @@ export default {
 </script>
 
 <style>
-.item{
-    width: 200px;
-    border: solid, 2px, green;
-}
-.item__img{
-    height: 150px;
-    width: 150px;
-}
-.img{
-    width: 100%;
-}
+
 </style>
