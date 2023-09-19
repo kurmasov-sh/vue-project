@@ -2,6 +2,7 @@
     <div class="container">
         <header_temp/>
         <main_temp/>
+        <footer_temp/>
     </div>
     
 </template>
