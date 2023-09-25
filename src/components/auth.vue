@@ -1,5 +1,6 @@
 <template>
-<main class="form-signin">
+<div class="container">
+  <main class="form-signin">
   <form>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -21,6 +22,7 @@
     <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
   </form>
 </main>
+</div>
 </template>
 
 <script>
