@@ -1,6 +1,6 @@
 <template>
         <header_temp/>
-        <main_temp/>
+        <detail/>
         <footer_temp/>
     
 </template>
@@ -11,10 +11,10 @@ import  header_temp  from "@/components/header.vue";
 import  main_temp  from "@/components/main.vue";
 import  auth  from "@/components/auth.vue";
 import  admin  from "@/components/adminPage.vue";
-
+import detail from "@/components/detail.vue";
 export default {
     components: {
-        auth,header_temp,footer_temp,main_temp, admin,
+        auth,header_temp,footer_temp,main_temp, admin, detail,
     },
     data() {
         return {
