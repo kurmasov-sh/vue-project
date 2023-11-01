@@ -1,6 +1,6 @@
 <template>
         <header_temp/>
-        <detail/>
+        <main_temp/>
         <footer_temp/>
     
 </template>

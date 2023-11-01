@@ -56,7 +56,10 @@
   </script>
   
   <style scoped>
-
-
+.cart {
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
   </style>
   
