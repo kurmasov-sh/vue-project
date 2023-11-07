@@ -6,7 +6,6 @@ const PORT = 5000;
 
 const path = require('path');
 const app = express();
-const port = 3000;
 
 // Указывает Express, где находятся статические файлы клиентской части
 app.use(express.static(path.join(__dirname, 'dist')));

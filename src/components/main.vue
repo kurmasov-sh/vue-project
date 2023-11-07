@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container main-container">
         <h2 class="mt-5 mb-4">Каталог продуктов</h2>
         <div class="row" >
             <!-- Продукт 1 -->
@@ -49,5 +49,7 @@ export default {
 </script>
 
 <style>
-
+.main-container {
+    min-height: 100vh;
+}
 </style>
