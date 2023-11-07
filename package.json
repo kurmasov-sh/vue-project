@@ -1,7 +1,6 @@
 {
   "name": "vue-project",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,6 +8,7 @@
     "start": "node script.js"
   },
   "dependencies": {
+    "axios": "^1.6.0",
     "bootstrap": "^5.3.2",
     "core-js": "^3.8.3",
     "express": "^4.18.2",

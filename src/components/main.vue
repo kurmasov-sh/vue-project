@@ -3,7 +3,7 @@
         <h2 class="mt-5 mb-4">Каталог продуктов</h2>
         <div class="row" >
             <!-- Продукт 1 -->
-            <div class="col-md-3 mb-4" v-for="product in products">
+            <div class="col-md-3 mb-4" v-for="product in products" :key="product.id">
                 <div class="card">
                     <!-- Изображение товара -->
                     <img :src="item_path" class="card-img-top" alt="Продукт 1">
@@ -22,47 +22,30 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
             item_path:'/images/product-item_img2.jpg',
-            products: [
-                {
-                    name: 'Товар 1',
-                    description: 'Описание товара 1',
-                    price: '1000 р.'
-                },
-                {
-                    name: 'Товар 2',
-                    description: 'Описание товара 1',
-                    price: '1000 р.'
-                },
-                {
-                    name: 'Товар 3',
-                    description: 'Описание товара 1',
-                    price: '1000 р.'
-                },
-                {
-                    name: 'Товар 4',
-                    description: 'Описание товара 1',
-                    price: '1000 р.'
-                },
-                {
-                    name: 'Товар 4',
-                    description: 'Описание товара 1',
-                    price: '1000 р.'
-                }
-            ],
-            busket: [
-                {
-                    
-                }
-            ]
-            
+            products: [],
         }
         
-    }
+    },
+    mounted () {
+    axios.get('/bd')
+  .then(response => {
+    // Обработка данных из ответа
+    this.products = response.data;
+    console.log(products)
+    // Используйте данные в вашем приложении
+  })
+  .catch(error => {
+    console.error('Ошибка при получении данных:', error);
+  });
 }
+
+}
+
 </script>
 
 <style>
