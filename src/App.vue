@@ -1,6 +1,6 @@
 <template>
         <header_temp/>
-        <main_temp/>
+        <RouterView/>
         <footer_temp/>
     
 </template>
