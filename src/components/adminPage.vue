@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-5">
+    <div class="container mt-5 main-container">
       <h1>Панель администратора</h1>
       
       <!-- Форма для создания товара -->

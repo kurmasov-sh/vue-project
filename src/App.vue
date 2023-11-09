@@ -1,6 +1,7 @@
 <template>
         <header_temp/>
-        <RouterView/>
+        <router-view></router-view>
+        <router-link to="/auth">123</router-link>
         <footer_temp/>
     
 </template>
@@ -29,6 +30,9 @@ export default {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 
+}
+.main-container {
+    min-height: 100vh;
 }
 
 </style>

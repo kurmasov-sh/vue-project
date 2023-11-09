@@ -22,6 +22,10 @@ const router = createRouter(
                 path: '/auth',
                 component: auth,
             },
+            {
+                path: '/admin',
+                component: admin,
+            },
         ]
     }
 )
