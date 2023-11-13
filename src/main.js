@@ -26,6 +26,10 @@ const router = createRouter(
                 path: '/admin',
                 component: admin,
             },
+            {
+                path: '/detail',
+                component: detail,
+            },
         ]
     }
 )

@@ -13,7 +13,7 @@
                         <!-- Цена товара -->
                         <p class="card-text">{{product.price}}</p>
                         <!-- Кнопка "Добавить в корзину" -->
-                        <a href="#" class="btn btn-primary">Добавить в корзину</a>
+                        <router-link to="detail" class="btn btn-primary">Добавить в корзину</router-link>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 <template>
         <header_temp/>
         <router-view></router-view>
-        <router-link to="/auth">123</router-link>
         <footer_temp/>
     
 </template>
