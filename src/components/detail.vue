@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 main-container">
     <div class="row">
       <!-- Изображение товара -->
       <div class="col-lg-6">
@@ -8,7 +8,7 @@
 
       <!-- Информация о товаре -->
       <div class="col-lg-6">
-        <h2>{{ product.name }}</h2>
+        <h2>{{ $route.params.id }}</h2>
         <p class="lead">{{ product.description }}</p>
 
         <!-- Характеристики товара -->
