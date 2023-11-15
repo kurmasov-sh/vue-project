@@ -8,7 +8,7 @@
 
       <!-- Информация о товаре -->
       <div class="col-lg-6">
-        <h2>{{ $route.params.id }}</h2>
+        <h2>{{ $route.params.name }}</h2>
         <p class="lead">{{ product.description }}</p>
 
         <!-- Характеристики товара -->
@@ -34,7 +34,7 @@
         <!-- Цена и кнопка "Добавить в корзину" -->
         <div class="mt-4">
           <p class="lead">
-            <strong>Цена:</strong> {{ product.price }} руб.
+            <strong>Цена:</strong> {{ $route.params.price }} руб.
           </p>
           <button @click="addToCart" class="btn btn-primary">Добавить в корзину</button>
         </div>
