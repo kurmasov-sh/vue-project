@@ -13,7 +13,7 @@
                         <!-- Цена товара -->
                         <p class="card-text">{{product.price}}</p>
                         <!-- Кнопка "Добавить в корзину" -->
-                        <router-link :to="{ name: 'detail', params: { name: product.name, price:product.price } }" class="btn btn-primary">Купить</router-link>
+                        <router-link :to="{ name: 'detail', params: { name: product.name, description: product.description, price:product.price } }" class="btn btn-primary">Купить</router-link>
                     </div>
                 </div>
             </div>

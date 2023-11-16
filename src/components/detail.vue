@@ -9,7 +9,7 @@
       <!-- Информация о товаре -->
       <div class="col-lg-6">
         <h2>{{ $route.params.name }}</h2>
-        <p class="lead">{{ product.description }}</p>
+        <p class="lead">{{ $route.params.description }}</p>
 
         <!-- Характеристики товара -->
         <div class="mt-4">
@@ -48,11 +48,7 @@ export default {
   data() {
     return {
       product: {
-        id: 1,
-        name: 'Название товара',
-        description: 'Описание товара',
-        image: 'путь_к_изображению.jpg',
-        price: 1000,
+        image: '/images/product-item_img2.jpg',
         colors: ['Красный', 'Синий', 'Зеленый'],
         materials: ['Дерево', 'Металл', 'Пластик'],
         // Другие характеристики товара
