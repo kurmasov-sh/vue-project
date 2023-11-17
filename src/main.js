@@ -9,7 +9,7 @@ import  main_temp  from "@/components/main.vue";
 import  auth  from "@/components/auth.vue";
 import  admin  from "@/components/adminPage.vue";
 import detail from "@/components/detail.vue";
-
+import store from "@/store"
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -36,4 +36,5 @@ const router = createRouter(
 )
 createApp(App)
     .use(router)
+    .use(store)
     .mount('#app')

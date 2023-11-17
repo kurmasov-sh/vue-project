@@ -1,6 +1,8 @@
 <template>
 <div class="container main-container">
         <h2 class="mt-5 mb-4">Каталог продуктов</h2>
+        <h2 class="mt-5 mb-4">{{ getAll }}</h2>
+        <button @click="addToCart">ADD</button>
         <div class="row" >
             <!-- Продукт 1 -->
             <div class="col-md-3 mb-4" v-for="product in products" :key="product.id">
@@ -22,7 +24,9 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters, mapActions  } from 'vuex'
 import axios from 'axios';
+import store from '@/store';
 export default {
     data() {
         return {
@@ -30,6 +34,23 @@ export default {
             products: [],
         }
         
+    },
+    computed: {
+        ...mapGetters([
+            'getAll',
+        ])
+    },
+    methods: {
+        ...mapMutations([
+            'addItem'
+        ]),
+        ...mapActions([
+            'getPosts'
+        ]),
+        addToCart() {
+            store.commit('addItem', 'картошка');
+            store.dispatch('addItem');
+        }
     },
     mounted () {
     axios.get('/bd')
