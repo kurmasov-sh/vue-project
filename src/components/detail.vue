@@ -44,6 +44,9 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from 'uuid';
+import { mapMutations, mapGetters, mapActions  } from 'vuex'
+import store from '@/store';
 export default {
   data() {
     return {
@@ -58,11 +61,25 @@ export default {
     };
   },
   methods: {
-    addToCart() {
-      // Логика добавления товара в корзину
-      console.log('Товар добавлен в корзину:', this.product.name, this.selectedColor, this.selectedMaterial);
+        ...mapMutations([
+            'addItem'
+        ]),
+        ...mapActions([
+            'getPosts'
+        ]),
+        addToCart() {
+          const item = {
+        id: uuidv4(),
+        name: this.$route.params.name,
+        price: this.$route.params.price,
+        color: this.selectedColor,
+        material: this.selectedMaterial,
+        // Добавьте другие свойства товара, если они есть
+      }
+            store.commit('addItem', item);
+            store.dispatch('addItem');
+        }
     },
-  },
 };
 </script>
 

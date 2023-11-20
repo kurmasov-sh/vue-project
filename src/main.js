@@ -10,6 +10,7 @@ import  auth  from "@/components/auth.vue";
 import  admin  from "@/components/adminPage.vue";
 import detail from "@/components/detail.vue";
 import store from "@/store"
+import  cart  from "@/components/cart.vue";
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -28,8 +29,12 @@ const router = createRouter(
             },
             {
                 name: 'detail',
-                path: '/detail/:name/:description/:price',
+                path: '/detail/:id/:name/:description/:price',
                 component: detail,
+            },
+            {
+                path: '/cart',
+                component: cart,
             },
         ]
     }

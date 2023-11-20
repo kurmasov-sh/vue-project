@@ -1,8 +1,6 @@
 <template>
 <div class="container main-container">
         <h2 class="mt-5 mb-4">Каталог продуктов</h2>
-        <h2 class="mt-5 mb-4">{{ getAll }}</h2>
-        <button @click="addToCart">ADD</button>
         <div class="row" >
             <!-- Продукт 1 -->
             <div class="col-md-3 mb-4" v-for="product in products" :key="product.id">
@@ -15,7 +13,7 @@
                         <!-- Цена товара -->
                         <p class="card-text">{{product.price}}</p>
                         <!-- Кнопка "Добавить в корзину" -->
-                        <router-link :to="{ name: 'detail', params: { name: product.name, description: product.description, price:product.price } }" class="btn btn-primary">Купить</router-link>
+                        <router-link :to="{ name: 'detail', params: {id: product.id, name: product.name, description: product.description, price:product.price } }" class="btn btn-primary">Купить</router-link>
                     </div>
                 </div>
             </div>
@@ -35,11 +33,6 @@ export default {
         }
         
     },
-    computed: {
-        ...mapGetters([
-            'getAll',
-        ])
-    },
     methods: {
         ...mapMutations([
             'addItem'
@@ -57,7 +50,6 @@ export default {
   .then(response => {
     // Обработка данных из ответа
     this.products = response.data;
-    console.log(products)
     // Используйте данные в вашем приложении
   })
   .catch(error => {

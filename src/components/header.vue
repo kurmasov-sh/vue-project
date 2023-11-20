@@ -15,7 +15,7 @@
 
                 <!-- Корзина -->
                 <div class="cart">
-                        <a class="btn btn-outline-primary" href="#">Корзина <span class="badge bg-danger">{{ busket.length }}</span></a>
+                        <router-link class="btn btn-outline-primary" to="/cart">Корзина <span class="badge bg-danger">{{ $store.state.cartItems.length }}</span></router-link>
                         <router-link to="/admin">
                             <button type="button" class="btn btn-secondary" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
